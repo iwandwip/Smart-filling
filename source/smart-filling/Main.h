@@ -5,6 +5,8 @@ struct MainSys {
                   void (*Shutdown)(void));
 
         void Handler();
+        void (*Reset)(void) = 0;
+
 
       private:
         uint32_t mainTmr;

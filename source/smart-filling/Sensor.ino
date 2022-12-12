@@ -31,15 +31,3 @@ void Sensor::Handler() {
                 sensTmr = millis();
         }
 }
-
-char Sensor::getKey() {
-        return this->key;
-}
-
-uint32_t Sensor::getDist() {
-        return this->dist;
-}
-
-uint8_t Sensor::getProx() {
-        return this->prox;
-}

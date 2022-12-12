@@ -9,6 +9,7 @@ void Start() {
 }
 
 void Shutdown() {
+        sys.Reset();
 }
 
 void setup() {

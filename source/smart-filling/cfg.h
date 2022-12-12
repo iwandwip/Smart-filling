@@ -18,7 +18,7 @@
         @param hexa hexaKey pada Keypad 
         @param pins Keypad Pin
 */
-#define KEYADDR 0x21
+#define KEYADDR 0x20
 #define ROWS 4
 #define COLS 4
 
