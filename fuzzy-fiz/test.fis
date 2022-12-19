@@ -1,0 +1,50 @@
+[System]
+Name='diabet'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='umur'
+Range=[0 100]
+NumMFs=4
+MF1='muda':'trapmf',[-10 -8 29 38]
+MF2='paruh-baya':'trimf',[33 38 45]
+MF3='sangat-tua':'trapmf',[52 60 110 120]
+MF4='mf4':'trimf',[40 48 58]
+
+[Input2]
+Name='berat-badan'
+Range=[0 50]
+NumMFs=5
+MF1='kurus-berat':'trapmf',[-10 -9 15 17]
+MF2='normal':'trimf',[17.5 22 25]
+MF3='gemuk_berat':'trapmf',[26 31 60 70]
+MF4='kurus-ringan':'trimf',[16 17 18.5]
+MF5='gemuk_ringan':'trimf',[23.6 25.6 26.6]
+
+[Input3]
+Name='tekanan-darah'
+Range=[0 300]
+NumMFs=4
+MF1='rendah':'trapmf',[-10 -9 110 134]
+MF2='nomral':'trimf',[127 140 153]
+MF3='sangat-tinggi':'trapmf',[154 170 310 320]
+MF4='tinggi':'trimf',[142.528169014084 157.528169014084 172.528169014084]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Rules]

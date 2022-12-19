@@ -1,0 +1,40 @@
+[System]
+Name='smart-filling'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='ultrasonic_(cm)'
+Range=[0 10]
+NumMFs=3
+MF1='jauh':'trapmf',[-10 -5 6 6.5]
+MF2='sedang':'trimf',[6 7 8]
+MF3='dekat':'trapmf',[7.5 8 15 20]
+
+[Input2]
+Name='waterflow_(liter/h)'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Output1]
+Name='output1'
+Range=[0 255]
+NumMFs=5
+MF1='tutup':'trapmf',[-92.0780985915493 -7.03809859154929 14.2219014084507 99.2419014084507]
+MF2='mf2':'trimf',[21.25 127.5 233.8]
+MF3='satu':'trapmf',[250 255 260 270]
+MF4='mf4':'trimf',[-171.047535211268 83.9524647887324 338.952464788732]
+MF5='mf5':'trimf',[-71.8309859154929 183.169014084507 438.169014084507]
+
+[Rules]
